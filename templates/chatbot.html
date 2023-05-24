@@ -1,0 +1,28 @@
+<link rel="stylesheet" href="static/css/chatbot.css">
+{%  include   'base.html' %}
+<div class="container contact-form">
+	<div class="contact-image">
+		<img src="static/img/chatbot.jpg" alt="rocket_contact"/>
+	</div>
+	<form method="post">
+			{% csrf_token %}
+		<h3>Hello I'm HealthMate!</h3>
+	   <div class="row">
+			<div class="col-md-6">
+				<div class="form-group">
+					<input type="text" name="user_input" name="user_input" class="form-control" placeholder="What Your Query" value="" />
+					<br>
+					<br>
+					<button class="button-33" role="button"type="submit">Submit</button>
+				</div>
+				{% if response %}
+				<div>
+					<h2> Our response</h2>
+					{{ response|safe }}
+				</div>
+				{% endif %}
+			</div>
+		</div>
+	</form>
+</div>
+		

@@ -1,0 +1,136 @@
+<!--
+Author: Colorlib
+Author URL: https://colorlib.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+{%  include   'second_main.html' %}
+<!DOCTYPE html>
+<html>
+<head>
+<title>Creative Colorlib SignUp Form</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="static/css/add_hospital.css">
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,2); } </script>
+<!-- Custom Theme files -->
+
+<!-- //Custom Theme files -->
+<!-- web font -->
+<link href="//fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i" rel="stylesheet">
+<!-- //web font -->
+</head>
+<body>
+  
+  <!-- main -->
+  <div class="main-w3layouts wrapper">
+    <h1>Hospital Registration Form</h1>
+    <div class="main-agileinfo">
+      <div class="agileits-top">
+        <form action="" method="post">
+          {% csrf_token %}
+          <label class="form-label" for="username" >Hospital Name</label>
+          <input class="text" type="text" id="name" name="name" placeholder="Your Full Name" required="" >
+          <br>
+          <br>
+          <label class="form-label" for="username">Hospital Email</label>
+          <input class="text email" type="email" id= "mail" name="mail" placeholder="✉ Email" required="">
+          <br>
+          <label class="form-label" for="username">Your Contact Number</label>
+          <input class="text" type="text" id="contact_Number" name="Contact_Number" placeholder="☏ Contact Number" required="" >
+          <div class="wthree-text">
+            <label class="anim">
+              <input type="checkbox" class="checkbox" id="checkbox" name="checkbox">
+              <span>Available On WhatsApp!!</span>
+            </label>
+          <br>
+          <br>
+          <label class="form-label" for="username">Capaity of Hospital to take Patients a day</label>
+          <input class="text" type="text" id= "capaity" name="capaity" placeholder="" required="">
+          <br>
+          <br>
+          
+          <label class="form-label" for="username">Total Number of Bed Available</label>
+          <input class="text" type="text" id= "beds" name="beds" placeholder="" required="">
+          <br>
+          <br>
+          <label class="radio-inline" for="Oxygen"> Oxygen Available;
+            <select name="oxygen" id="oxygen"  required=""> 
+              <option value="Yes">Yes</option>
+              <option value="No">No</option>
+            </select>
+          </label>
+          <br>
+          <br>
+          <label class="form-label" for="username">Data Update On</label>
+          <input type="date"  id ="date" name="date" required="" >
+          <br>
+          <br>
+          <label class="form-label" for="username">Provinance</label>
+          <select name="city" id="city"  required=""> 
+            <option value="Delhi">Delhi</option>
+            <option value="Noida">Noida</option>
+            <option value="Greator Noida">Greator Noida</option>
+            <option value="Ghaziabad">Ghaziabad</option>
+            <option value="Faridabad">Faridabad</option>
+            <option value="Meerut">Meerut</option>
+            <option value="Bulandshahr">Bulandshahr</option>
+          </select>
+          <br>
+          <br>
+          <br>
+          <label class="form-label" for="username">Choose Department</label>
+          <select multiple name="department" id="department"  required="">
+            <option selected disabled>--Select Department--</option>
+            <optgroup label="Departments">
+                <option>Family Physicians</option>
+                <option>Allergists/Immunologists</option>
+                <option>Anesthesiologists</option>
+                <option>Colon and Rectal Surgeons</option>
+                <option>Critical Care Medicine Specialists</option>
+                <option>Cardiologists</option>
+                <option>Dermatologists</option>
+                <option>Gastroenterologists</option>
+                <option>Infectious Disease Specialists</option>
+                <option>Neurologists</option>
+                <option>Endocrinologists</option>
+            </optgroup>                        
+        </select>
+          <br>
+          <br>
+          <label class="form-label" for="username">Address</label>
+          <input class="text" type="text" id ="address" name="address" placeholder="🏘 Hospital Address" required="">
+          <br>
+          <br>
+          <div class="wthree-text">
+            <label class="anim">
+              <input type="checkbox" class="checkbox" required="">
+              <span>I, hereby, declare that the particulars given above are correct and complete.</span>
+            </label>
+            <div class="clear"> </div>
+          </div>
+          <input type="submit" value="Enroll">
+        </form>
+      </div>
+    </div>
+    <!-- copyright -->
+    <div class="colorlibcopy-agile">
+     
+    </div>
+    <!-- //copyright -->
+    <ul class="colorlib-bubbles">
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+  </div>
+  <!-- //main -->
+</body>
+</html>

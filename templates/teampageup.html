@@ -1,0 +1,66 @@
+
+{%  include   'base.html' %}
+
+{% load static %}
+<link rel="stylesheet" href="static/css/teamsignup.css">
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="static/css/styles.css">
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 pt-5 pb-2 ourTeam-hedding text-center">
+      <h1>Please Login into Your Account</h1>
+      <p> 
+      </p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-4 col-sm-4 col-xs-12">
+      <div class="row section-success ourTeam-box text-center">
+        <div class="col-md-12 section1">
+          <img src="{% static 'img/admin.jpg' %}">
+        </div>
+        <div class="col-md-12 section2 pb-3">
+          <p style="font-size:28px ;">Admin</p>
+          <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="submit">
+            <a href="{% url 'admin_login' %}" style="color:#15F0D8 ;"> LOGIN</a>
+          </button>
+        </div>
+        <div class="col-md-12 section3">
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 col-sm-4 col-xs-12">
+      <div class="row section-info ourTeam-box text-center">
+        <div class="col-md-12 section1">
+          <img src="{% static 'img/hospitalmanagement_staff.jpg' %}">
+        </div>
+        <div class="col-md-12 section2 pb-3">
+          <p style="font-size:28px ;">Hospital Staff</p>
+          <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="submit">
+            <a href="{% url 'staff_login' %}" style="color:#39EF3F ;"> LOGIN</a>
+          </button>
+        </div>
+        <div class="col-md-12 section3">
+          
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 col-sm-4 col-xs-12">
+      <div class="row section-danger ourTeam-box text-center">
+        <div class="col-md-12 section1">
+          <img src="{% static 'img/patient.png' %}">
+        </div>
+        <div class="col-md-12 section2 pb-3">
+          <p style="font-size:28px ;">Patient</p>
+          <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="submit">
+            <a href="{% url 'new' %}" style="color:#FB8B2E"> LOGIN</a>
+          </button>
+        </div>
+        <div class="col-md-12 section3">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{%  include   'footer.html' %}

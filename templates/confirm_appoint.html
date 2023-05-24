@@ -1,0 +1,123 @@
+<!--
+Author: Colorlib
+Author URL: https://colorlib.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+{%  include   'second_main.html' %}
+<!DOCTYPE html>
+<html>
+<head>
+<title>Creative Colorlib SignUp Form</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="static/css/confirm.css">
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- Custom Theme files -->
+{% comment %} <link href="css/style.css" rel="stylesheet" type="text/css" media="all" /> {% endcomment %}
+<!-- //Custom Theme files -->
+<!-- web font -->
+<link href="//fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i" rel="stylesheet">
+<link rel="stylesheet" href="static/css/table.css">
+<!-- //web font -->
+</head>
+<body>
+  <!-- main -->
+  <div class="main-w3layouts wrapper">
+    <h1>Patient Registration Form</h1>
+
+    <div class="main-agileinfo">
+      <div class="agileits-top">
+        <form action="#" method="post">
+          <label class="form-label" for="username" >Patient Name: {{patient_info.name}}</label>
+          <br>
+          <br>
+          <label class="form-label" for="username" >Patient Email: {{patient_info.mail}}</label>
+          <br>
+          <br>
+          <label class="form-label" for="username" >Patient Contact Number: {{patient_info.phone}}</label>
+          <br>
+          <br>
+          <label class="form-label" for="username" >Patient Gender: {{patient_info.gender}}</label>
+          <table>
+            <thead>
+                <tr>
+                    <th>Hospital Name</th>
+                    <th>Hospital Daily Capaity</th>
+                    <th>Oxygen Available</th>
+                    <th>Total Number of Beds Available</th>
+                    <th>Data Updated On</th>
+                    <th> Address</th>
+                </tr>
+            </thead>
+            <hr>
+            <tbody>
+              {% comment %} Run a for loop for fetching the data {% endcomment %}
+            {% for task in tasks%}
+            {% if task.city == "Delhi"%}
+            <tr>
+              <td>{{task.name}}</td>
+              <td>{{task.capaity}}</td>
+              <td>{{task.oxygen}}</td>
+              <td>{{task.beds}}</td>
+              <td>{{task.date}}</td>
+              <td>{{task.address}}</td>
+            </tr>
+            <tr>
+            {% endif %}
+            {% endfor %}
+            </tbody>
+        </table>
+        {% csrf_token %}
+        <div class="dropdown">
+        <label class="form-label" for="username" >Choose Hospital</label>
+          <select name="hospital" id="hospital" required="" >
+            {% for task in tasks%}
+            <option value="{{task.name}}">{{task.name}}</option>
+            {% endfor %}
+          </select>
+        </div>
+          <br>
+          <br>
+          {% comment %} New Script {% endcomment %}
+          <br>
+          <br>
+          <br>
+          <label class="form-label" for="username" >Write Your Problem Description</label>
+          <div class="textbox-area">
+            <textarea class="textbox-area__input" placeholder="Type your Description here" name="desc" id="desc"></textarea>
+          </div>          
+            <br>
+            <br>          
+
+          {% comment %} <label class="form-label" for="username">Confirm Patient Mail Again</label>
+          <input class="text" type="text" id= "mail" name="mail" placeholder="Enter mail Again" required=""> {% endcomment %}
+          <br>
+          <br>
+          <div class="wthree-text">
+            <label class="anim">
+              <input type="checkbox" class="checkbox" required="">
+              <span>I, hereby, declare that the particulars given above are correct and complete.</span>
+            </label>
+            <div class="clear"> </div>
+          </div>
+          <input type="submit" value="Confirm Appointment">
+        </form>
+      </div>
+    </div>
+    <ul class="colorlib-bubbles">
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+  </div>
+  <!-- //main -->
+</body>
+</html>

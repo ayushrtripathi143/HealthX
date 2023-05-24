@@ -1,0 +1,207 @@
+{%  include   'second_main.html' %}
+<link rel="stylesheet" href="static/css/medical_remainder.css">
+
+<div class="container">
+  <div class=" text-center mt-5 ">
+
+      <h1 >Medical Remainder</h1>
+  </div>
+<div class="row ">
+  <div class="col-lg-7 mx-auto">
+    <div class="card mt-2 mx-auto p-4 bg-light">
+        <div class="card-body bg-light">
+   
+        <div class = "container">
+      <form id="contact-form" role="form" method="post"> 
+        {% csrf_token %}
+        {{medical_remainder.as_p}}
+        <div class="controls">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="form_name">Firstname *</label>
+                        <input id="form_name" type="text" name="name" class="form-control" placeholder="Please enter Patient Name *" >
+                        <br>
+                        <input id="form_name" type="text" name="email" class="form-control" placeholder="Please enter Patient Email *" >
+                        <br>
+                        <button class="button-25" role="button"  type="submit">Submit</button>
+                    </div>
+                </div>
+            </div>
+    </div>
+    </div>
+        </div>
+  
+  
+  </div>
+    <!-- /.8 -->
+  
+  </div>
+  <!-- /.row-->
+  
+  </div>
+  </div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="table-wrapper">
+    <table class="fl-table">
+        <thead>
+        <tr>
+            <th>Medicine Name</th>
+            <th>Does</th>
+            <th>Number of Days to be take</th>
+            <th>Remarks</th>
+            <th>Action</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Content 1</td>
+            <td>Content 1</td>
+            <td>Content 1</td>
+            <td>Content 1</td>
+            <td>Content 1</td>
+        </tr>
+        <tr>
+            <td>Content 2</td>
+            <td>Content 2</td>
+            <td>Content 2</td>
+            <td>Content 2</td>
+            <td>Content 2</td>
+        </tr>
+        <tr>
+            <td>Content 3</td>
+            <td>Content 3</td>
+            <td>Content 3</td>
+            <td>Content 3</td>
+            <td>Content 3</td>
+        </tr>
+        <tr>
+            <td>Content 4</td>
+            <td>Content 4</td>
+            <td>Content 4</td>
+            <td>Content 4</td>
+            <td>Content 4</td>
+        </tr>
+        <tr>
+            <td>Content 5</td>
+            <td>Content 5</td>
+            <td>Content 5</td>
+            <td>Content 5</td>
+            <td>Content 5</td>
+        </tr>
+        <tr>
+            <td>Content 6</td>
+            <td>Content 6</td>
+            <td>Content 6</td>
+            <td>Content 6</td>
+            <td>Content 6</td>
+        </tr>
+        <tr>
+            <td>Content 7</td>
+            <td>Content 7</td>
+            <td>Content 7</td>
+            <td>Content 7</td>
+            <td>Content 7</td>
+        </tr>
+        <tr>
+            <td>Content 8</td>
+            <td>Content 8</td>
+            <td>Content 8</td>
+            <td>Content 8</td>
+            <td>Content 8</td>
+        </tr>
+        <tr>
+            <td>Content 9</td>
+            <td>Content 9</td>
+            <td>Content 9</td>
+            <td>Content 9</td>
+            <td>Content 9</td>
+        </tr>
+        <tr>
+            <td>Content 10</td>
+            <td>Content 10</td>
+            <td>Content 10</td>
+            <td>Content 10</td>
+            <td>Content 10</td>
+        </tr>
+        <tbody>
+    </table>
+</div>
+
+<div class="container">
+  <div class=" text-center mt-5 ">
+
+      <h1 >Data Updation Form</h1>
+          
+      
+  </div>
+
+<div class="row ">
+<div class="col-lg-7 mx-auto">
+  <div class="card mt-2 mx-auto p-4 bg-light">
+      <div class="card-body bg-light">
+ 
+      <div class = "container">
+      <div class="controls">
+        <form method="post">
+            {% csrf_token %}
+            {{medical_rest_data.as_p}}
+        
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="form_name">Email</label>
+                        <input id="form_name" type="text" name="email" class="form-control" placeholder="">
+                    </div>
+                </div>
+
+          <div class="row">
+              <div class="col-md-6">
+                  <div class="form-group">
+                      <label for="form_name">Medicine Name</label>
+                      <input id="form_name" type="text" name="medicine_name" class="form-control" >
+                  </div>
+              </div>
+              <div class="col-md-6">
+                  <div class="form-group">
+                      <label for="form_lastname">Does</label>
+                      <input id="form_lastname" type="text" name="does" class="form-control" >
+                                                      </div>
+              </div>
+          </div>
+          <div class="row">
+              <div class="col-md-6">
+                  <div class="form-group">
+                      <label for="form_email">Number of Days to be take</label>
+                      <input id="form_lastname" type="text" name="days" class="form-control" >
+                      
+                  </div>
+              </div>
+          </div>
+          <div class="row">
+              <div class="col-md-12">
+                  <div class="form-group">
+                      <label for="form_message">Remarks *</label>
+                      <textarea id="form_message" name="message" class="form-control" placeholder="Write your message here."></textarea>
+                      </div>
+                  </div>
+              <div class="col-md-12">
+              <button class="button-41" role="button" type='submit'>Search</button>
+          </div>
+    
+          </div>
+
+  </div>
+   </form>
+  </div>
+      </div>
+</div>
+</div>
+</div>
+</div>
+
+{%  include   'footer.html' %}

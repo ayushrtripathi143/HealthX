@@ -1,0 +1,45 @@
+{%  include   'second_main.html' %}
+<link rel="stylesheet" href="static/css/view_appoitment.css">
+<div class="main-container">
+    <div class="heading">
+      <h1 class="heading__title">View Your Appointment Requested Here</h1>
+    </div>
+    <form>
+    <input id="firstname" class="input" type="text" placeholder=" Enter Hospital Name Here" name="q" id="q"/>
+    <button class="custom-btn btn-3" type="submit"><span>Submit!</span></button>
+    </form>
+    {% for patient_info in patient_data%}
+        {% for rest_info in rest_data%}
+        {% if rest_info.mail == patient_info.mail %}
+    <div class="cards">
+      <div class="card card-1">
+        <div class="card__icon"><i class="fas fa-bolt"></i></div>
+        <p class="card__exit"><i class="fas fa-times"></i></p>      
+        <label class="form-label" for="username" >Patient Name: {{patient_info.name}}</label>
+        <br>
+        <label class="form-label" for="username" >Patient Email: {{patient_info.mail}}</label>
+        <br>
+        <label class="form-label" for="username" >Patient Contact No: {{patient_info.phone}}</label>
+        <br>
+        <label class="form-label" for="username" >Patient Gender: {{patient_info.gender}}</label>
+        <br>
+        <label class="form-label" for="username" >Hospital Name: {{rest_info.hospital}}</label>
+        <br>
+        <label class="form-label" for="username" >Department Name: {{rest_info.dept}} </label>
+        <br>
+        <label class="form-label" for="username" >Appointment Date :{{rest_info.date}}</label>
+        <br>
+        <label class="form-label" for="username" >Appointment Timming :{{rest_info.time}}</label>
+        <br>
+        <label class="form-label" for="username" >Description of Problem :{{rest_info.desc}}</label>
+        <br>
+        <button class="custom-btn btn-15" onclick="window.open('http://127.0.0.1:8000/admin/home/appointment_rest_data/')"><span>Update!</span></button>
+        <button class="custom-btn btn-1"><span>Approved!</span></button>
+        <button class="custom-btn btn-11"><span>Delete!</span></button>
+      </div>
+    </div>
+    {% endif %}
+    {% endfor %}
+    {% endfor %}
+  </div>
+  {%  include   'footer.html' %}

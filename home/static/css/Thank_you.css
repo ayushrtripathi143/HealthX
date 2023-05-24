@@ -1,0 +1,100 @@
+#form-submit-bg {
+    margin: 0 auto;
+    height: 100vh;
+    width: 100%;
+    background: #64639c;
+    background: -webkit-linear-gradient(
+      left,
+      #7071a6,
+      #585692
+    ); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(
+      right,
+      #7071a6,
+      #585692
+    ); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(
+      right,
+      #7071a6,
+      #585692
+    ); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to right, #7071a6, #585692); /* Standard syntax */
+  }
+  
+  .card-form-submit {
+    position: absolute;
+    // height: 570px;
+    height: 620px;
+    width: 566px;
+    background: #ffffff;
+    box-shadow: 0px 15px 20px -10px rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    transition: color 0.6s, box-shadow 0.3s, transform 0.3s;
+  }
+  .card-form-submit:hover {
+    box-shadow: 0 3px 5px -5px rgba(0, 0, 0, 0.3);
+  }
+  .hero-form-submit img {
+    position: relative;
+    height: 383px;
+    width: auto;
+  }
+  
+  .card-form-submit h1 {
+    font-family:futurastd-heavy,sans-serif;
+    margin-top: 0px;
+    margin-bottom:10px;
+    padding-left: 39px;
+    padding-right: 39px;
+    text-align: left;
+    font-size: 38px;
+    color: #75758f;
+  }
+  
+  .card-form-submit p {
+    font-family: AvenirLTStd-Roman;
+    font-size: 17px;
+    line-height: 1.4;
+    color: #a8a9b8;
+    padding-left: 39px;
+    padding-right: 39px;
+    margin-top: 0px;
+    text-align: left;
+  }
+  
+  .formb2b-submitted-page .button.primary {
+    width: 490px !important;
+    margin-left: 38px !important;
+  }
+  
+  @media screen and (max-width: 621px) {
+    .card-form-submit {
+      margin-top: -70px;
+      transform: scale(0.5);
+      transform-origin: -283px -216.5px;
+      height: 1000px;
+    }
+  
+    .card-form-submit h1 {
+      font-size: 70px;
+    }
+  
+    .card-form-submit p {
+      font-size: 35px;
+      padding-bottom: 30px;
+    }
+  
+    .formb2b-submitted-page .card-form-submit .link-to-home {
+      transform: scale(2);
+      margin-top: 0px;
+      margin-left: 160px !important;
+    }
+    .formb2b-submitted-page .button.primary {
+      width: 250px !important;
+    }
+  }
+  
